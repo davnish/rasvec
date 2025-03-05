@@ -3,7 +3,7 @@ import rasterio as rio
 from rasterio.features import rasterize
 import numpy as np
 
-def rasterize(raster_path, vector_path, output_path, classification_column = None):
+def rasterization(raster_path, vector_path, output_path, classification_column = None):
     """
     Rasterize the vector file and save it as a tiff file.
     If there are multiple classes in the vector file, the classification_column should be provided.

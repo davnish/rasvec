@@ -6,7 +6,14 @@ import shapely
 import os
 
 
-def create_grid(input_path, output_path, grid_size):
+def create_grid_on_vector(input_path, output_path, grid_size):
+    """Creates grid of the given vector.
+
+    Args:
+        input_path (str): vector file path.
+        output_path (str): output file path.
+        grid_size (str): grid size to be created in meters.
+    """
 
     boundary = gpd.read_file(input_path)
     if boundary.crs.to_epsg() != 3857:
@@ -27,17 +34,3 @@ def create_grid(input_path, output_path, grid_size):
     grid_cells['grid_no'] = range(len(grid_cells))
 
     grid_cells.to_file(output_path, driver='ESRI Shapefile')
-
-
-if __name__ == '__main__':
-    # fig, ax = plt.subplots()
-    # # boundary.plot(ax = ax)
-    # boundary.plot(ax = ax, color = 'red')
-    # grid_cells.plot(ax = ax, edgecolor='blue', facecolor = 'none')
-    # print(len(grid_cells))
-    # # grid_cells.plot(ax = ax, edgecolor='black', facecolor = 'none')
-    # plt.show()
-
-    create_grid("/Users/nischal/projects/rasvec/Nagla_Dhanua/mathura_village_boundary.shp",
-                "/Users/nischal/projects/rasvec/grid_india/grid_mathura.shp", 500)
-    pass

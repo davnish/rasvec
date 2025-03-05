@@ -1,11 +1,11 @@
 import geopandas as gpd
 from rasterio import features
 import rasterio as rio
+import shapely
 
 
 def vectorization(source, output, simplify_tolerance=None, dst_crs=None, **kwargs):
     """Vectorize a raster dataset.
-
     Args:
         source (str): The path to the tiff file.
         output (str): The path to the vector file.

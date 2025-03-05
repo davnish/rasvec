@@ -1,3 +1,0 @@
-building_ext
-coco_detect
-parcel_streamlit
