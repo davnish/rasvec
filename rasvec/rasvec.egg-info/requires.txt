@@ -1,0 +1,3 @@
+geopandas>=0.8.0
+rasterio>=1.3.10
+patchify>=0.2.3
