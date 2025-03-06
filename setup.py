@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 setup(
     name="rasvec",
     version="0.0.1",
-    description="",
+    description="A python library to ease the of the handling geospatial data.",
     author="Nischal Singh",
     author_email="nischal.singh38@gmail.com",
     url="https://github.com/davnish/rasvec.git",
@@ -15,10 +15,10 @@ setup(
     package_dir={"", "rasvec"},
     packages=find_packages(where="rasvec"),
     install_requires=[
-        "rasterio >= 1.3.10",
         "geopandas >= 1.0.1",
+        "rasterio >= 1.3.10",
         "patchify >= 0.2.3"
         ],
-    python_requires = ">=3.11",
+    python_requires = ">=3.12.9",
     license="MIT",
 )
