@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: rasvec
+Version: 0.0.12
+Summary: A python library to ease the of the handling geospatial data.
+Home-page: https://github.com/davnish/rasvec.git
+Author: Nischal Singh
+Author-email: nischal.singh38@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: geopandas>=1.0.1
+Requires-Dist: rasterio>=1.4.3
+Requires-Dist: patchify>=0.2.3
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: xyzservices>=2025.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# rasvec
+
+This is a library for handling geospatial data. While doing machine learning we face many problem. This package is designed to ease some of those problems.
