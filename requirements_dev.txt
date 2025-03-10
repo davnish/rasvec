@@ -5,8 +5,8 @@ pillow>=11.1.0
 xyzservices>=2025.1.0
 
 # dev requirements
-tox
-pytest
+tox>=4.24.2
+pytest>=8.3.5
 # black
 # flake8
 # mypy

@@ -181,6 +181,7 @@ detection/
 
 # some specific files
 src/rasvec/ml/null_labels.py
+src/*.egg-info/
 
 # mac files
 .DS_Store

@@ -1,1 +1,0 @@
-"""unit test for python package rasvec"""
