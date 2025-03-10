@@ -1,0 +1,5 @@
+geopandas>=1.0.1
+rasterio>=1.4.3
+patchify>=0.2.3
+pillow>=11.1.0
+xyzservices>=2025.1.0
