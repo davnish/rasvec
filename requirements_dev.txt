@@ -7,6 +7,9 @@ xyzservices>=2025.1.0
 # dev requirements
 tox
 pytest
-black
-flake8
-mypy
+# black
+# flake8
+# mypy
+
+# installing lib
+-e .
