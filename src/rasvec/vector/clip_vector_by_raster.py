@@ -3,6 +3,7 @@ import rasterio as rio
 import geopandas as gpd
 from shapely import box
 
+
 def clip_vector_by_raster(raster_path, vector_path, output_path):
     """
     This function clips the vector file given the raster's extent.
@@ -17,14 +18,15 @@ def clip_vector_by_raster(raster_path, vector_path, output_path):
     """
     shp = gpd.read_file(vector_path).to_crs(3857)
     filename = os.path.basename(vector_path)
-    
+
     with rio.open(raster_path) as src:
         bound = src.bounds
         mask = box(bound[0], bound[1], bound[2], bound[3])
-        
-    shp_new = shp.clip(mask = mask)
+
+    shp_new = shp.clip(mask=mask)
     output_path_filename = os.path.join(output_path, filename)
-    shp_new.to_file(output_path_filename, driver = "ESRI Shapefile")
+    shp_new.to_file(output_path_filename, driver="ESRI Shapefile")
+
 
 # def clip_vector_by_raster(raster_path, vector_path, output_path):
 #     with rio.open(raster_path) as src:
@@ -53,10 +55,10 @@ def clip_vector_by_raster(raster_path, vector_path, output_path):
 #                         disty.append(abs(clipped_geom.y-top_left_corner[1])/abs(top_left_corner[1] - botton_right_corner[1]))
 #                         width.append(5/abs(botton_right_corner[0] - top_left_corner[0]))
 #                         height.append(5/abs(botton_right_corner[1] - top_left_corner[1]))
-#         except Exception as e: 
+#         except Exception as e:
 #             print(e)
 #             continue
-    
+
 #     if len(clipped_features) > 0:
 #         try:
 #             clipped_gdf = gpd.GeoDataFrame({"distx": distx, "disty": disty, "width": width, "height": height}, geometry=clipped_features, crs='EPSG:3857')

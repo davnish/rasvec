@@ -15,7 +15,6 @@ def vectorization(source, output, simplify_tolerance=None, dst_crs=None, **kwarg
 
     with rio.open(source) as src:
         band = src.read()
-
         mask = band != 0
         shapes = features.shapes(band, mask=mask, transform=src.transform)
 

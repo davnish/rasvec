@@ -1,4 +1,3 @@
-
 import re
 import io
 import os
@@ -9,6 +8,7 @@ import xyzservices.providers as xyz
 from PIL import Image
 import collections
 import numpy as np
+
 
 def get_basemaps(free_only=True):
     """Returns a dictionary of xyz basemaps.
@@ -29,6 +29,7 @@ def get_basemaps(free_only=True):
 
     return basemaps
 
+
 def get_xyz_dict(free_only=True):
     """Returns a dictionary of xyz services.
 
@@ -38,7 +39,7 @@ def get_xyz_dict(free_only=True):
     Returns:
         dict: A dictionary of xyz services.
     """
-    
+
     def _unpack_sub_parameters(var, param):
         temp = var
         for sub_param in param.split("."):
@@ -73,9 +74,8 @@ def get_xyz_dict(free_only=True):
     xyz_dict = collections.OrderedDict(sorted(xyz_dict.items()))
     return xyz_dict
 
-def reproject(
-    image, output, dst_crs="EPSG:4326", resampling="nearest", **kwargs
-):
+
+def reproject(image, output, dst_crs="EPSG:4326", resampling="nearest", **kwargs):
     """Reprojects an image.
 
     Args:
@@ -124,6 +124,7 @@ def reproject(
                     resampling=resampling,
                     **kwargs,
                 )
+
 
 def tms_to_geotiff(
     output,
