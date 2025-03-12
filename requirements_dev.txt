@@ -1,14 +1,14 @@
-geopandas>=1.0.1
-rasterio>=1.4.3
-patchify>=0.2.3
-pillow>=11.1.0
-xyzservices>=2025.1.0
-ensure>=1.0.4
-matplotlib>=3.10.1
+geopandas
+rasterio
+patchify
+pillow
+xyzservices
+ensure
+matplotlib
 
 # dev requirements
-tox>=4.24.2
-pytest>=8.3.5
+tox
+pytest
 # black
 # flake8
 # mypy
