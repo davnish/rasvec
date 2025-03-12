@@ -3,6 +3,8 @@ rasterio>=1.4.3
 patchify>=0.2.3
 pillow>=11.1.0
 xyzservices>=2025.1.0
+ensure>=1.0.4
+matplotlib>=3.10.1
 
 # dev requirements
 tox>=4.24.2
