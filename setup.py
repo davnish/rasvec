@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="rasvec",
-    version="0.0.12",
+    version="0.1.0",
     description="A python library to ease the of the handling geospatial data.",
     author="Nischal Singh",
     author_email="nischal.singh38@gmail.com",
