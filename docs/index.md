@@ -1,17 +1,25 @@
-# Welcome to MkDocs
+# Welcome to Rasvec
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a library for handling geospatial data. While doing machine learning we face many problem. This package is designed to ease some of those problems.
 
-## Commands
+PYPI link for this package - [Rasvec](https://pypi.org/project/rasvec/)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Getting Started
 
-## Project layout
+### Install from PyPi
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To install the library from PyPi run the below command in your terminal.
+
+```bash
+pip install rasvec
+```
+
+### Install from GitHub
+
+To install the development version from GitHub using Git, run the following command in your terminal.
+
+```bash
+pip install git+https://github.com/davnish/rasvec.git
+```
+
+

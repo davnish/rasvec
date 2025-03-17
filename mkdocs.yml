@@ -1,8 +1,13 @@
-site_name: My Docs
+site_name: Rasvec
 site_url: https://github.com/davnish/rasvec
 
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
   palette:
     - scheme: slate
       toggle:
@@ -18,11 +23,15 @@ theme:
       primary: blue
       accent: deep orange
 
+
 plugins:
   - mkdocs-jupyter:
       include_source: true
       execute: false
       ignore_h1_titles: true
+
+repo_name: davnish/rasvec
+repo_url: https://github.com/davnish/rasvec
 
 nav:
   - Home: index.md
@@ -37,3 +46,5 @@ nav:
       - examples/patchify_raster.ipynb
       - examples/vectorization.ipynb
 
+copyright: |
+  &copy; 2025 <a href="https://github.com/davnish/rasvec.git"  target="_blank" rel="noopener">Nischal Singh</a>
