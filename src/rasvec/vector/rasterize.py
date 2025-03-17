@@ -4,15 +4,15 @@ from rasterio.features import rasterize
 import numpy as np
 
 
-def rasterization(raster_path, vector_path, output_path, classification_column=None):
+def rasterize_by_raster(raster_path, vector_path, output_path, classification_column=None):
     """
-    Rasterize the vector file and save it as a tiff file.
+    Rasterize a vector file with the same pixel size as a raster file and save it as a tif.
     If there are multiple classes in the vector file, the classification_column should be provided.
 
     Args:
         raster_path (str): Raster path.
         vector_path (str): Vector path.
-        output_path (str): Output directory path.c
+        output_path (str): Output directory path.
         classification_column (str, optional): column name whose value will be used to burn into the raster.
         The values in the classification column will be mapped to a continous range.
         If None, all the geometries will be burned with value 1

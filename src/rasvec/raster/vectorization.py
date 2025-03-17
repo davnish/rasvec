@@ -4,11 +4,11 @@ import rasterio as rio
 import shapely
 
 
-def vectorization(source, output, simplify_tolerance=None, dst_crs=None, **kwargs):
+def vectorization(source, output=None, simplify_tolerance=None, dst_crs=None, **kwargs):
     """Vectorize a raster dataset.
     Args:
         source (str): The path to the tiff file.
-        output (str): The path to the vector file.
+        output (str, optional): The path to the vector file.
         simplify_tolerance (float, optional): The maximum allowed geometry displacement.
         The higher this value, the smaller the number of vertices in the resulting geometry.
     """
@@ -33,4 +33,7 @@ def vectorization(source, output, simplify_tolerance=None, dst_crs=None, **kwarg
     if dst_crs is not None:
         gdf = gdf.to_crs(dst_crs)
 
-    gdf.to_file(output, **kwargs)
+    if output is not None:
+        gdf.to_file(output, **kwargs)
+
+    return gdf

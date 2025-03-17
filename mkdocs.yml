@@ -10,7 +10,7 @@ theme:
         name: Dark mode
       primary: green
       accent: deep purple
-    
+
     - scheme: default
       toggle:
         icon: material/weather-night
@@ -18,4 +18,22 @@ theme:
       primary: blue
       accent: deep orange
 
-  
+plugins:
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+      ignore_h1_titles: true
+
+nav:
+  - Home: index.md
+  - Examples: 
+    - Vector:
+      - examples/create_grid.ipynb
+      - examples/clip_vector_by_raster.ipynb
+      - examples/rasterization.ipynb
+    - Download:
+      - examples/downloading.ipynb
+    - Raster:
+      - examples/patchify_raster.ipynb
+      - examples/vectorization.ipynb
+

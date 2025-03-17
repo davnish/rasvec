@@ -4,7 +4,7 @@ import geopandas as gpd
 from shapely import box
 
 
-def clip_vector_by_raster(raster_path, vector_path, output_path):
+def clip_vector_by_raster(raster_path, vector_path, output=None):
     """
     This function clips the vector file given the raster's extent.
 
@@ -12,20 +12,24 @@ def clip_vector_by_raster(raster_path, vector_path, output_path):
     The given raster's crs should be "3857".
 
     Args:
-        raster_path (str): Raster's path
-        vector_path (str): Vector's path
-        output_path (str): Output_path directory filepath, the filename is carried from the given vector's name
+        raster_path (str): Raster's path.
+        vector_path (str): Vector's path.
+        output (str): Output file's path.
     """
     shp = gpd.read_file(vector_path).to_crs(3857)
-    filename = os.path.basename(vector_path)
 
     with rio.open(raster_path) as src:
         bound = src.bounds
         mask = box(bound[0], bound[1], bound[2], bound[3])
 
-    shp_new = shp.clip(mask=mask)
-    output_path_filename = os.path.join(output_path, filename)
-    shp_new.to_file(output_path_filename, driver="ESRI Shapefile")
+    shp_clipped = shp.clip(mask=mask)
+
+    if output is not None:
+        shp_clipped.to_file(output, driver="ESRI Shapefile")
+
+    return shp_clipped
+
+
 
 
 # def clip_vector_by_raster(raster_path, vector_path, output_path):
