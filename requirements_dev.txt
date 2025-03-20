@@ -1,10 +1,10 @@
-geopandas
+ensure
+pillow
 rasterio
 patchify
-pillow
-xyzservices
-ensure
+geopandas
 matplotlib
+xyzservices
 
 # dev requirements
 tox

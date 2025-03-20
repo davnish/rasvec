@@ -1,8 +1,7 @@
-geopandas
+ensure
+pillow
 rasterio
 patchify
-pillow
-xyzservices
-ensure
+geopandas
 matplotlib
--e .
+xyzservices
