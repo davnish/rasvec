@@ -1,4 +1,3 @@
-from typing import Union
 import numpy as np
 import geopandas as gpd
 from shapely import box
@@ -7,7 +6,7 @@ from pathlib import Path
 
 
 @ensure_annotations
-def create_grid_on_vector(input_path : str, grid_size : Union[float,int], output_path: Union[str, None] = None) -> gpd.GeoDataFrame:
+def create_grid_on_vector(input_path : str, grid_size : float | int, output_path: str | None = None) -> gpd.GeoDataFrame:
     """Creates a grid over the entire vector file.
 
     Args:

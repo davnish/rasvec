@@ -1,1 +1,1 @@
-from .view import view
+from .view import view_rasters

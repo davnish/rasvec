@@ -29,13 +29,12 @@ def patchify_raster(raster_path, output_path, patch_size=1024, padding=True):
         pad_width = (patch_size - data.shape[1] % patch_size) % patch_size
 
     if data.ndim == 3:
-        data = np.pad(data, ((0, pad_height), (0, pad_width), (0, 0)), mode="constant")
+        if padding: data = np.pad(data, ((0, pad_height), (0, pad_width), (0, 0)), mode="constant")
         patches = patchify(data, (patch_size, patch_size, 3), step=patch_size).squeeze()
     else:
-        data = np.pad(data, ((0, pad_height), (0, pad_width)), mode="constant")
+        if padding: data = np.pad(data, ((0, pad_height), (0, pad_width)), mode="constant")
         patches = patchify(data, (patch_size, patch_size), step=patch_size).squeeze()
 
-    idx = 0
     for i in range(patches.shape[0]):
         for j in range(patches.shape[1]):
             patch = patches[i, j]
@@ -53,11 +52,11 @@ def patchify_raster(raster_path, output_path, patch_size=1024, padding=True):
                 "transform": patch_transform,
             }
             patch_path = os.path.join(
-                output_path, f"{os.path.splitext(filename)[0]}.{idx}.tif"
+                output_path, f"{os.path.splitext(filename)[0]}.{i}_{j}.tif"
             )
 
             with rio.open(patch_path, "w", **patch_meta) as dst:
                 dst.write(patch.transpose(2, 0, 1) if data.ndim == 3 else patch)
-            idx += 1
 
+    print(f"Patches shape: {patches.shape}")
     print(f"Saved the patched files in output dir: {output_path}")
