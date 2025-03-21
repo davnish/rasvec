@@ -7,7 +7,6 @@ matplotlib
 xyzservices
 
 # dev requirements
-tox
 pytest
 # black
 # flake8
