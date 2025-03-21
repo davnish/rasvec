@@ -1,4 +1,4 @@
-<img src= "docs/img/rasvec.png" width = "100%">
+<img src= "https://raw.githubusercontent.com/davnish/rasvec/refs/heads/main/docs/img/rasvec.png" width = "100%">
 
 # Rasvec
 
@@ -55,7 +55,7 @@ plt.tight_layout()
 ```
 The output:
 
-<img src= "docs/img/grid.png" width = 700>
+<img src= "https://raw.githubusercontent.com/davnish/rasvec/refs/heads/main/docs/img/grid.png" width = "100%">
 
 ## Installation
 
