@@ -4,6 +4,8 @@
 
 This is a Python library designed to streamline the handling of geospatial data, particularly for machine learning applications. Working with geospatial datasets often involves challenges like rasterization, vectorization, and grid creation—this library provides efficient and easy-to-use functions to simplify these processes.
 
+- Documentation : https://rasvec.readthedocs.io
+
 ## Features
 
 ### vectors
