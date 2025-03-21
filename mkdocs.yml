@@ -3,6 +3,7 @@ site_url: https://github.com/davnish/rasvec
 
 theme:
   name: material
+  logo: img/rasvec_icon.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -11,17 +12,17 @@ theme:
   palette:
     - scheme: slate
       toggle:
-        icon: material/weather-sunny
+        icon: material/toggle-switch-off-outline 
         name: Dark mode
-      primary: green
-      accent: deep purple
+      primary: teal
+      accent: orange
 
     - scheme: default
       toggle:
-        icon: material/weather-night
+        icon: material/toggle-switch
         name: Light mode
-      primary: blue
-      accent: deep orange
+      primary: teal
+      accent: orange
 
 
 plugins:

@@ -1,8 +1,10 @@
-# rasvec
+<img src= "docs/img/rasvec.png" width = "100%">
+
+# Rasvec
 
 This is a Python library designed to streamline the handling of geospatial data, particularly for machine learning applications. Working with geospatial datasets often involves challenges like rasterization, vectorization, and grid creation—this library provides efficient and easy-to-use functions to simplify these processes.
 
-## features
+## Features
 
 ### vectors
 
@@ -16,9 +18,14 @@ This is a Python library designed to streamline the handling of geospatial data,
 - `vectorization`
 
 ### satellite imagery
+
 - `tms_to_geotiff` 
 
-## example
+### view
+
+- `view_rasters`
+
+## Example
 
 Here's an example of a feature: Generating a grid over a vector file.
 
@@ -46,11 +53,11 @@ plt.tight_layout()
 ```
 The output:
 
-<img src= "misc/grid.png" width = 700>
+<img src= "docs/img/grid.png" width = 700>
 
-## installation
+## Installation
 
-### Install from PyPi
+### install from PyPi
 
 To install the library from PyPi run the below command in your terminal.
 
@@ -58,7 +65,7 @@ To install the library from PyPi run the below command in your terminal.
 pip install rasvec
 ```
 
-### Install from GitHub
+### install from GitHub
 
 To install the development version from GitHub using Git, run the following command in your terminal.
 
