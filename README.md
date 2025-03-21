@@ -68,8 +68,9 @@ pip install git+https://github.com/davnish/rasvec.git
 
 ## acknowledgements
 
-This package was made possible due to the following dependencies.
+This package was made possible due to the following open source projects.
 
+-   [segment-geospatial](https://github.com/opengeos/segment-geospatial)
 -   [tms2geotiff](https://github.com/gumblex/tms2geotiff)
 
 
