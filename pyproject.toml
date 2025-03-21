@@ -1,8 +1,25 @@
 [build-system]
-requires = ['setuptools', "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.pytest.ini_options]
-testpaths = [
-    "tests"
-    ]
+[project]
+name = "rasvec"
+dynamic = ["version", "dependencies"]
+description = "A Geospatial data handling library."
+authors = [
+    {name = "Nischal Singh", email = "nischal.singh38@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ['geospatial', 'geopython', 'raster', 'vector', 'machine-learning']
+
+[project.urls]
+Homepage = "https://github.com/davnish/rasvec.git"
+Documentation = "https://rasvec.readthedocs.io"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.distutils.bdist_wheel]
+universal = false
