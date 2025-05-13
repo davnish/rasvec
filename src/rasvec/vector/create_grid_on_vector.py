@@ -1,12 +1,10 @@
 import numpy as np
 import geopandas as gpd
 from shapely import box
-from ensure import ensure_annotations
 from pathlib import Path
 
 
-@ensure_annotations
-def create_grid_on_vector(input_path : str, grid_size : float | int, output_path: str | None = None) -> gpd.GeoDataFrame:
+def grid_vector(input_path : str, grid_size : float | int, output_path: str | None = None) -> gpd.GeoDataFrame:
     """Creates a grid over the entire vector file.
 
     Args:

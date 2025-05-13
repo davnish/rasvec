@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rasvec"
-version = "0.1.3"
+version = "0.1.4"
 dynamic = ["dependencies"]
 description = "A Geospatial data handling library."
 authors = [

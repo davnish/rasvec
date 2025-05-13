@@ -30,10 +30,10 @@ def patchify_raster(raster_path, output_path, patch_size=1024, padding=True):
 
     if data.ndim == 3:
         if padding: data = np.pad(data, ((0, pad_height), (0, pad_width), (0, 0)), mode="constant")
-        patches = patchify(data, (patch_size, patch_size, 3), step=patch_size).squeeze()
+        patches = patchify(data, (patch_size, patch_size, 3), step=patch_size).squeeze(axis = 2)
     else:
         if padding: data = np.pad(data, ((0, pad_height), (0, pad_width)), mode="constant")
-        patches = patchify(data, (patch_size, patch_size), step=patch_size).squeeze()
+        patches = patchify(data, (patch_size, patch_size), step=patch_size).squeeze(axis = 2)
 
     for i in range(patches.shape[0]):
         for j in range(patches.shape[1]):

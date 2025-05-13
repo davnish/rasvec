@@ -1,7 +1,7 @@
-ensure
 pillow
 rasterio
 patchify
 geopandas
 matplotlib
 xyzservices
+requests
