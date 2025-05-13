@@ -24,11 +24,11 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Installing libgdal-dev, build-essential, gdal-bin and pygdal
+    - name: Installing libgdal-dev, gcc, gdal-bin and pygdal
       run: |
 
         sudo apt-get update
-        sudo apt-get install -y gcc
+        sudo apt-get install -y g++
         sudo apt-get install libgdal-dev gdal-bin -y
         version=$(gdalinfo --version | grep -oP '\d+\.\d+\.\d')
         pip install pygdal==$version.*
