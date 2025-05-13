@@ -24,16 +24,18 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Installing libgdal-dev
+    - name: Installing libgdal-dev, gdal-bin and pygdal
       run: |
         sudo apt-get update
-        sudo apt-get install libgdal-dev -y
-
+        sudo apt-get install libgdal-dev gdal-bin -y
+        version=$(gdal info --version | grep -oP '\d+\.\d+\.\d'))
+        pip install pygdal==$version.*
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements_dev.txt
+
     - name: Testing
       run: |
         pytest
