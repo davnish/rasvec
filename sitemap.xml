@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://github.com/davnish/rasvec/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/clip_vector_by_raster/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/create_grid/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/downloading/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/patchify_raster/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/rasterization/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/davnish/rasvec/examples/vectorization/</loc>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+</urlset>
