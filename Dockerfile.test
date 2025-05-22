@@ -1,0 +1,35 @@
+# Use Python 3.9 slim image
+FROM python:3.9-slim
+
+# Install dependencies and GDAL, then clean up
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    g++ \
+    gdal-bin \
+    libgdal-dev \
+    && apt-get autoremove -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install uv for faster package management
+RUN pip install --no-cache-dir uv
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements first for better caching
+COPY requirements_dev.txt /app/
+COPY /src /app/src
+COPY pyproject.toml .
+
+RUN uv pip install --no-cache-dir  -r requirements_dev.txt --system
+
+RUN uv pip install --no-cache-dir numpy==1.26.4 --system
+RUN uv pip install --no-cache-dir --no-build-isolation GDAL[numpy]==$(gdal-config --version) --system
+
+
+COPY /tests /app/tests
+COPY /docs /app/docs
+
+# Default command
+ENTRYPOINT ["pytest"]

@@ -2,14 +2,10 @@ pillow
 rasterio
 patchify
 geopandas
-matplotlib
 xyzservices
 requests
 # dev requirements
 pytest
-# black
-# flake8
-# mypy
+matplotlib
 
-# installing lib
 -e .
