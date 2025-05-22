@@ -1,9 +1,9 @@
-import geopandas as gpd
 import matplotlib.pyplot as plt
 from rasterio.plot import show
 import rasterio as rio
+from typing import Union
 
-def view_rasters(plot_list : list | str, grid : tuple | None = None) -> None:
+def view_rasters(plot_list : Union[list, str], grid : Union[tuple, None] = None) -> None:
     """Plots the given list of plots."""
 
     if isinstance(plot_list, str):

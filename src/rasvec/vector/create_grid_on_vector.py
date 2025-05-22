@@ -2,9 +2,9 @@ import numpy as np
 import geopandas as gpd
 from shapely import box
 from pathlib import Path
+from typing import Union
 
-
-def grid_vector(input_path : str, grid_size : float | int, output_path: str | None = None) -> gpd.GeoDataFrame:
+def grid_vector(input_path : str, grid_size : Union[float, int], output_path: Union[str, None] = None) -> gpd.GeoDataFrame:
     """Creates a grid over the entire vector file.
 
     Args:

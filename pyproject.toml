@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rasvec"
-version = "0.1.4"
+version = "0.1.5"
 dynamic = ["dependencies"]
 description = "A Geospatial data handling library."
 authors = [
     {name = "Nischal Singh", email = "nischal.singh38@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 license = "MIT"
 keywords = ['geospatial', 'geopython', 'raster', 'vector', 'machine-learning']
 
