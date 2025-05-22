@@ -23,8 +23,6 @@ COPY /src /app/src
 COPY pyproject.toml .
 
 RUN uv pip install --no-cache-dir  -r requirements_dev.txt --system
-
-RUN uv pip install --no-cache-dir numpy==1.26.4 --system
 RUN uv pip install --no-cache-dir --no-build-isolation GDAL[numpy]==$(gdal-config --version) --system
 
 
